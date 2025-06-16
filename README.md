@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# 🛒 Food Store Cart (React + TypeScript + SCSS)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a responsive and interactive cart page for a food-store web application. Built with **React**, **TypeScript**, and **SCSS**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✅ Features
 
-### `npm start`
+- 📱 Fully responsive layout (desktop & mobile)
+- 💡 Subscription logic with dynamic discount handling
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧩 Tech Stack
 
-### `npm test`
+- React
+- TypeScript
+- SCSS (Sass)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📁 Folder Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+src/
+├── assets/              # Static files
+├── components/Cart/     # UI components (CartItem, Reviews, Summary, etc.)
+├── features/cart/       # Business logic: types, utils, constants
+├── pages/CartPage.tsx   # Main cart page
+├── styles/cart.scss     # SCSS layout & responsive styling
+├── App.tsx              # Entry point component
+└── index.tsx            # App root
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Getting Started
 
-### `npm run eject`
+### 1. Clone the repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/your-username/food-store-cart.git
+cd food-store-cart
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 2. Install dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> 💡 If you face a peer dependency conflict (especially with `sass`), run:
 
-## Learn More
+```bash
+npm install sass --legacy-peer-deps
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 3. Run the app
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🧪 Functional Requirements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- ✅ “Subscribe & save” vs “One-time” toggle
+- ✅ Discount badges update based on selected duration:
+  - 1 month → 26%
+  - 3 months → 23%
+  - 6 months (default) → 20%
+  - 12 months → 15%
+- ✅ Client-side only (no data persistence)
+- ✅ Responsive design per Figma mobile layout
