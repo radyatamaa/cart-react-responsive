@@ -32,16 +32,30 @@ const CartPage: React.FC = () => {
   };
 
   return (
-    <div className="cart-container">
-      <Reviews />
-      <div className="cart-panel">
-        <h2>Your cart</h2>
-        {items.map((item) => (
-          <CartItem key={item.id} item={item} onUpdate={updateItem} />
-        ))}
-        <CartSummary items={items} />
+    <>
+    <div className="page-wrapper">
+      <div className="cart-header">
+        <div className="left">
+          <h2>Your cart</h2>
+          <span className="badge">Same day labs, next day results</span>
+        </div>
+        <div className="right">
+          <a href="#" className="continue">Continue shopping</a>
+          <button className="checkout-btn">Checkout</button>
+        </div>
+      </div>
+
+      <div className="cart-container">
+        <Reviews />
+        <div className="cart-panel">
+          {items.map((item) => (
+            <CartItem key={item.id} item={item} onUpdate={updateItem} />
+          ))}
+          <CartSummary items={items} />
+        </div>
       </div>
     </div>
+    </>
   );
 };
 
