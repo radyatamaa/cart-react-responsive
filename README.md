@@ -1,17 +1,17 @@
-# 🛒 Food Store Cart (React + TypeScript + SCSS)
+# cart-react-responsive(React + TypeScript + SCSS)
 
 This is a responsive and interactive cart page for a food-store web application. Built with **React**, **TypeScript**, and **SCSS**.
 
 ---
 
-## ✅ Features
+## Features
 
 - 📱 Fully responsive layout (desktop & mobile)
 - 💡 Subscription logic with dynamic discount handling
 
 ---
 
-## 🧩 Tech Stack
+## Tech Stack
 
 - React
 - TypeScript
@@ -19,7 +19,7 @@ This is a responsive and interactive cart page for a food-store web application.
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```
 src/
@@ -34,7 +34,7 @@ src/
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
@@ -65,7 +65,7 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🧪 Functional Requirements
+## Functional Requirements
 
 - ✅ “Subscribe & save” vs “One-time” toggle
 - ✅ Discount badges update based on selected duration:
@@ -74,4 +74,3 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
   - 6 months (default) → 20%
   - 12 months → 15%
 - ✅ Client-side only (no data persistence)
-- ✅ Responsive design per Figma mobile layout
