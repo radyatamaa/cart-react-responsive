@@ -85,6 +85,11 @@ const CartItem: React.FC<Props> = ({ item, onUpdate }) => {
             <span className="currency">$</span>{item.price.toFixed(2)}
           </span>
         </label>
+
+        <div className="remove-btn remove-mobile">
+          <span>Remove</span>
+          <img src={removeIcon} alt="Remove" className="icon-trash" />
+        </div>
       </div>
     </div>
   );
