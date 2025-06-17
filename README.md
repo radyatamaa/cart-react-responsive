@@ -4,6 +4,19 @@ This is a responsive and interactive cart page for a food-store web application.
 
 ---
 
+## System Requirements
+
+- ✅ Node.js **v16.x.x** is **required**
+
+> ℹ️ You can use [nvm](https://github.com/nvm-sh/nvm) to manage Node.js versions:
+>
+> ```bash
+> nvm install 16
+> nvm use 16
+> ```
+
+---
+
 ## Features
 
 - 📱 Fully responsive layout (desktop & mobile)
