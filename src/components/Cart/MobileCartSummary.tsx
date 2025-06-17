@@ -28,9 +28,9 @@ const MobileCartSummary: React.FC<Props> = ({ items }) => {
         {!isOpen && (
           <div className="amounts">
             {discount > 0 && (
-              <span className="before">${before.toFixed(2)}</span>
+              <span className="before"> <span className="currency">$</span>{before.toFixed(2)}</span>
             )}
-            <span className="total">${total.toFixed(2)}</span>
+            <span className="total"> <span className="currency">$</span>{total.toFixed(2)}</span>
           </div>
         )}
         <span className="chevron">
@@ -44,16 +44,16 @@ const MobileCartSummary: React.FC<Props> = ({ items }) => {
           {discount > 0 && (
             <div className="line">
               <span className="label green">Subscription discount</span>
-              <span className="green">- ${discount.toFixed(2)}</span>
+              <span className="green">-  <span className="currency">$</span>{discount.toFixed(2)}</span>
             </div>
           )}
           <div className="line total-line">
             <span>Total</span>
             <div>
               {discount > 0 && (
-                <span className="before">${before.toFixed(2)}</span>
+                <span className="before"> <span className="currency">$</span>{before.toFixed(2)}</span>
               )}
-              <span className="total">${total.toFixed(2)}</span>
+              <span className="total"> <span className="currency">$</span>{total.toFixed(2)}</span>
             </div>
           </div>
         </div>

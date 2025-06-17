@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* ⬅ ADD */
+}
+
 .page-wrapper {
   max-width: 1200px; // atau sesuai dengan desain Figma kamu
   margin: 0 auto;
@@ -17,7 +23,7 @@
     display: block;
     padding: 1.5rem 1rem 1rem;
     background-color: #f9f9f9;
-
+    min-width: 352px;
     .rating-row {
       display: flex;
       align-items: center;
@@ -28,28 +34,35 @@
       .title {
         font-weight: 600;
         font-size: 1.1rem;
+        margin-right: auto;
       }
 
-      .google-icon {
-        width: 18px;
-        height: 18px;
-      }
+      .rating-group {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: nowrap;
 
-      .score {
-        font-size: 0.95rem;
-        font-weight: 500;
-      }
+        .google-icon {
+          width: 18px;
+          height: 18px;
+        }
 
-      .star-icon {
-        width: 16px;
-        height: 16px;
-      }
+        .score {
+          font-size: 0.95rem;
+          font-weight: 500;
+        }
 
-      .review-link {
-        font-size: 0.9rem;
-        color: #555;
-        text-decoration: underline;
-        margin-left: 4px;
+        .star-icon {
+          width: 16px;
+          height: 16px;
+        }
+
+        .review-link {
+          font-size: 0.9rem;
+          color: #555;
+          text-decoration: underline;
+        }
       }
     }
 
@@ -181,26 +194,28 @@
 
 
 .cart-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap;
+ padding: 2rem;
+ display: grid;     
+ align-items: start;            /* ⬅ MODIFY */
+ grid-template-columns: 300px 1fr; /* panel kiri fixed 300px, panel kanan fleksibel */
+ column-gap: 2rem;             /* jarak horisontal */
+ row-gap: 2rem;                /* jarak vertikal */
+ padding: 2rem;                /* tetap gunakan padding wrapper */
 //   background-color: #F4F6F5;
 
   @media (max-width: 768px) {
-    flex-direction: column-reverse; // cart items dulu baru review
+    grid-template-columns: 1fr; // cart items dulu baru review
     padding: 1rem;
   }
 }
 
+
 // ========== Left Panel: Reviews ==========
 .review-panel {
-  width: 300px;
+  flex: 0 0 300px;
   background: white;
   border-radius: 12px;
-  padding: 1.5rem;
+  // padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   font-size: 0.95rem;
 
@@ -310,7 +325,7 @@
   min-width: 320px;
   background: transparent;
   border-radius: 12px;
-  padding: 1.5rem 0 1.5rem 1.5rem;
+  // padding: 1.5rem 0 1.5rem 1.5rem;
 //   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 
   h2 {
@@ -325,6 +340,8 @@
   padding: 1rem;
   margin-bottom: 1rem;
   background: #fafafa;
+box-sizing: border-box;
+word-wrap: break-word;
 
   // === REMOVE BUTTON ===
   .icon-trash {
@@ -834,6 +851,13 @@
   background: #f9f9f9;
   overflow: hidden;
 
+        .currency {
+        font-size: 0.75em;
+        position: relative;
+        top: -0.35em;
+        margin-right: 2px;
+      }
+      
   .total-row {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -939,3 +963,38 @@
 
 
 
+
+.review-panel,
+.cart-panel {
+padding: 1.5rem;              /* review‐panel */
+padding: 1.5rem;              /* ⬅ MODIFY uniform padding */
+}
+
+@media (max-width: 768px) {
+  .cart-container {
+    grid-template-columns: 1fr; /* single-column mobile */
+  }
+
+  /* di sini saja aturan panel mobile */
+  .review-panel,
+  .cart-panel {
+    width: 100%;
+    padding: 0; /* wrapper sudah punya padding */
+  }
+}
+
+// ————————————————————————————————————————————
+// ✂️ Pindahkan aturan panel keluar dari .cart-container
+.review-panel,
+.cart-panel {
+  /* desktop tetap 300px / auto-flex, mobile full-width override di bawah */
+  padding: 1.5rem;
+  // background: white;
+}
+
+@media (max-width: 768px) {
+  .cart-panel {
+    width: 100%;
+    padding: 0;   /* wrapper sudah punya padding */
+  }
+}
