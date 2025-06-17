@@ -91,6 +91,12 @@ const CartPage: React.FC = () => {
               <CartItem key={item.id} item={item} onUpdate={updateItem} />
             ))}
             {!isMobile && <CartSummary items={items} />}
+            {isMobile && (
+            <div className="actions" style={{ marginTop: "1rem" }}>
+              <a className="continue" href="#">Continue shopping</a>
+              <button className="checkout-btn">Checkout</button>
+            </div>
+            )}
           </div>
         </div>
       </div>

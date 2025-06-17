@@ -63,7 +63,10 @@
       background-color: #fff;
       text-align: center;
     }
+  }
+}
 
+@media (max-width: 768px) {
     .actions {
       display: flex;
       justify-content: space-between;
@@ -91,8 +94,8 @@
         color: #222A28;
       }
     }
-  }
 }
+
 
 .cart-header {
   display: flex;
