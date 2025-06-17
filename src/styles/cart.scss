@@ -105,6 +105,12 @@
         font-size: 1rem;
         cursor: pointer;
         color: #222A28;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background-color: #222A28;
+          color: #FDCC81;
+        }
       }
     }
 }
@@ -170,6 +176,12 @@
       font-size: 1rem;
       cursor: pointer;
       color: #222A28;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: #222A28;
+        color: #FDCC81;
+      }
     }
   }
 
@@ -826,6 +838,12 @@ word-wrap: break-word;
       font-size: 1rem;
       cursor: pointer;
       color: #222A28;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: #222A28;
+        color: #FDCC81;
+      }
     }
   }
 
