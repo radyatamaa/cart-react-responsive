@@ -235,11 +235,27 @@
     }
 
     .reviews-count {
-      margin-left: auto;
+      // margin-left: auto;
       font-size: 0.9rem;
       color: #2b3b37;
       text-decoration: underline;
       font-weight: 500;
+        &.desktop-only {
+          margin-left: auto;
+
+          @media (max-width: 768px) {
+            display: none;
+          }
+        }
+
+        &.mobile-only {
+          display: none;
+          margin-top: -0.25rem;
+
+          @media (max-width: 768px) {
+            display: inline-block;
+          }
+        }
     }
   }
 
@@ -282,7 +298,8 @@
 
   @media (max-width: 768px) {
     width: 100%;
-    padding: 1rem;
+    padding: 1;
+    box-sizing: border-box;
   }
 }
 

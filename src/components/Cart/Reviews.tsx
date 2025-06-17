@@ -13,34 +13,35 @@ const Reviews: React.FC = () => {
             <img key={i} src={starImage} alt="Star" className="star-icon" />
           ))}
         </div>
-        <a href="#" className="reviews-count">638 reviews</a>
+        <a href="#" className="reviews-count desktop-only">638 reviews</a>
+        <a href="#" className="reviews-count mobile-only">638 reviews</a>
+      </div>
+
+
+
+      <div className="review-item">
+        <div className="review-meta">
+          <div className="review-name">Tristan K.</div>
+          <small className="review-time">a day ago</small>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non massa lacus...</p>
       </div>
 
       <div className="review-item">
-  <div className="review-meta">
-    <div className="review-name">Tristan K.</div>
-    <small className="review-time">a day ago</small>
-  </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non massa lacus...</p>
-</div>
+        <div className="review-meta">
+          <div className="review-name">Jourdan B.</div>
+          <small className="review-time">2 weeks ago</small>
+        </div>
+        <p>Suspendisse vestibulum risus dignissim, laoreet nisi gravida, varius libero...</p>
+      </div>
 
-<div className="review-item">
-  <div className="review-meta">
-    <div className="review-name">Jourdan B.</div>
-    <small className="review-time">2 weeks ago</small>
-  </div>
-  <p>Suspendisse vestibulum risus dignissim, laoreet nisi gravida, varius libero...</p>
-</div>
-
-<div className="review-item">
-  <div className="review-meta">
-    <div className="review-name">Jack L.</div>
-    <small className="review-time">a month ago</small>
-  </div>
-  <p>Donec gravida erat eros, et egestas lorem malesuada ut. Duis non tellus tempus...</p>
-</div>
-
-
+      <div className="review-item">
+        <div className="review-meta">
+          <div className="review-name">Jack L.</div>
+          <small className="review-time">a month ago</small>
+        </div>
+        <p>Donec gravida erat eros, et egestas lorem malesuada ut. Duis non tellus tempus...</p>
+      </div>
       <a href="#" className="read-more">Read reviews</a>
     </div>
   );
